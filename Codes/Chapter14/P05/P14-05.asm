@@ -2,8 +2,8 @@
 global _start
 
 section .data
-    create_msg db ">> Directory Name (Create): ", 0
-    remove_msg db ">> Directory Name (Remove): ",0
+    create_msg db ">> Directory Path (Create): ", 0
+    remove_msg db ">> Directory Path (Remove): ", 0
     error_msg db ">> An Error Has Occurred, Its Code Is ", 0
     done_msg db ">> Done!", 0
     endl db 10, 0

@@ -2,12 +2,11 @@
 global _start
 
 section .data
-    inp_file1_msg db ">> File-1 Name: ", 0
-    inp_file2_msg db ">> File-2 Name: ", 0
+    file1_msg db ">> File-1 Name: ", 0
+    file2_msg db ">> File-2 Name: ", 0
     file1_error_msg db ">> File-1 Open Error!", 10, 0
     file2_error_msg db ">> File-2 Open Error!", 10, 0
     done_msg db ">> Done!", 10, 0
-    endl db 10, 0
 
 section .bss
     buffer1 resb 30
@@ -18,10 +17,10 @@ section .bss
 
 section .code
 _start:
-    puts inp_file1_msg
+    puts file1_msg
     fgets buffer1, 30
     push buffer1
-    puts inp_file2_msg
+    puts file2_msg
     fgets buffer2, 30
     push buffer2
     call append
@@ -30,21 +29,21 @@ _start:
     mov ebx, 0
     int 0x80
 
+%DEFINE FILE1 DWORD [EBP + 12]
+%DEFINE FILE2 DWORD [EBP + 8]
+
 ;---------------------------------proc append-------------------------------------;
 ; A procedure to concatenate two files. This procedure takes two files names      ;
 ; (i.e., pointers to files names strings) as parameters via the stack and appends ;
 ; contents of the second file to the first.                                       ;
 ;---------------------------------------------------------------------------------;
 
-%DEFINE file1_name DWORD [EBP + 12]
-%DEFINE file2_name DWORD [EBP + 8]
-
 append:
     enter 0, 0
     pusha
 open_file1:
     mov eax, 5          ; file open
-    mov ebx, file1_name ; pointer to file1 name
+    mov ebx, FILE1      ; pointer to file1 name
     mov ecx, 02001o     ; file access bits (set file pointer at the end of the file for appending)
     mov edx, 0700o;     file permissions
     int 0x80
@@ -56,7 +55,7 @@ check_open_error1:
     jmp done
 open_file2:
     mov eax, 5          ; file open
-    mov ebx, file2_name ; pointer to file2 name
+    mov ebx, FILE2      ; pointer to file2 name
     mov ecx, 0          ; file access bits (0 = read only)
     mov edx, 0700o      ; file permissions
     int 0x80
