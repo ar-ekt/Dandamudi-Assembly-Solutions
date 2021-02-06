@@ -44,7 +44,7 @@ create_dir:
     int 0x80
 check_create_error:
     cmp eax, 0          ; EAX = 0 if no error
-        je create_successful
+    je create_successful
     puts error_msg
     i2a eax, inp_buffer ; EAX = error code
     puts inp_buffer
@@ -73,7 +73,7 @@ remove_dir:
     mov ebx, PATH       ; EBX = path
     int 0x80
     cmp eax, 0          ; EAX = 0 if no error
-        je remove_successful
+    je remove_successful
     puts error_msg
 check_remove_error:
     i2a eax, inp_buffer ; EAX = error code

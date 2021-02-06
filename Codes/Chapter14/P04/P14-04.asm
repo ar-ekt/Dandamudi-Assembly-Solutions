@@ -38,7 +38,7 @@ change_dir:
     int 0x80
 check_change_error:
     cmp eax, 0          ; EAX = 0 if no error
-        je change_successful
+    je change_successful
     puts error_msg
     i2a eax, inp_buffer ; EAX = error code
     puts inp_buffer

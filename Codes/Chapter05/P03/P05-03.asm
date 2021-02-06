@@ -48,11 +48,11 @@ max:
     enter 0, 0
     mov eax, NUM1    ; load EAX with first number
     cmp eax, NUM2
-        jg next_cmp
+    jg next_cmp
     mov eax, NUM2    ; if second number is greater than first number, load EAX with it
 next_cmp:
     cmp eax, NUM3
-        jg max_done
+    jg max_done
     mov eax, NUM3    ; if third number is greater than other two, load EAX with it
 max_done:
     leave

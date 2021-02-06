@@ -50,7 +50,7 @@ open_file1:
     mov [fd_in1], eax   ; store fd for use in write routine
 check_open_error1:
     cmp eax, 0          ; open error if fd < 0
-        jge open_file2
+    jge open_file2
     puts file1_error_msg
     jmp done
 open_file2:
@@ -62,7 +62,7 @@ open_file2:
     mov [fd_in2], eax   ; store fd for use in read routine
 check_open_error2:
     cmp eax, 0          ; open error if fd < 0
-        jge appending_proc
+    jge appending_proc
     puts file2_error_msg
     jmp close_file1
 appending_proc:
@@ -79,7 +79,7 @@ appending_proc:
     mov ecx, inp_buffer
     int 0x80
     cmp edx, 256        ; EDX = # bytes read
-        jl close_file2  ; EDX < BUF_SIZE
+    jl close_file2  ; EDX < BUF_SIZE
     ; indicates end-of-file
     jmp appending_proc
 close_file2:

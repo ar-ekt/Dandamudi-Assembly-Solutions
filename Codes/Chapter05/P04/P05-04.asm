@@ -63,11 +63,11 @@ minmax:
 max:
     mov eax, NUM1    ; load EAX with first number
     cmp eax, NUM2
-        jg max_next_cmp
+    jg max_next_cmp
     mov eax, NUM2    ; if second number is greater than first number, load EAX with it
 max_next_cmp:
     cmp eax, NUM3
-        jg max_done
+    jg max_done
     mov eax, NUM3    ; if third number is greater than other two, load EAX with it
 max_done:
     mov ebx, MAX     ; load EBX with pointer to max_int
@@ -75,11 +75,11 @@ max_done:
 min:
     mov eax, NUM1    ; load EAX with first number
     cmp eax, NUM2
-        jl min_next_cmp
+    jl min_next_cmp
     mov eax, NUM2    ; if second number is less than first number, load EAX with it
 min_next_cmp:
     cmp eax, NUM3
-        jl min_done
+    jl min_done
     mov eax, NUM3    ; if third number is less than other two, load EAX with it
 min_done:
     mov ebx, MIN     ; load EBX with pointer to min_int
