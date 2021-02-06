@@ -58,32 +58,31 @@ inputArray:
     xor ECX, ECX
     
     puts MSG_ARRAY_INPUT
-    inputArray_loop:
-        
-        inputMember:
-            puts MSG_MEMBER_INPUT1
-            puti ECX
-            puts MSG_MEMBER_INPUT2
+    
+inputArray_loop:
+    puts MSG_MEMBER_INPUT1
+    puti ECX
+    puts MSG_MEMBER_INPUT2
 
-            geti
-            mov [ESI], EAX
+    geti
+    cmp EAX, 0
+    jl inputArray_done
+    
+    mov [ESI], EAX
+    
+    add ESI, 4
+    inc ECX
+    jmp inputArray_loop
         
-        inputMember_done:
-            cmp EAX, 0
-            jl inputArray_done
-            
-            add ESI, 4
-            inc ECX
-            jmp inputArray_loop
-        
-    inputArray_done:
-        mov len, ECX
-        
-        pop ESI
-        pop ECX
-        pop EAX
-        leave
-        ret 4-4
+inputArray_done:
+    mov len, ECX
+    
+    pop ESI
+    pop ECX
+    pop EAX
+    leave
+    ret 4-4
+
 
 insertionSort:
     %define len DWORD [EBP+12]
@@ -98,40 +97,41 @@ insertionSort:
     mov ESI, array
     xor ECX, ECX
     
-    insertionSort_loop1:
-        inc ECX
-        cmp ECX, len
-        je insertionSort_done
-        
-        mov EBX, [ESI+ECX*4]
-        mov EDX, ECX
-        dec EDX
-        
-        insertionSort_loop2:
-            cmp EDX, 0
-            jl insertionSort_loop2_done
+insertionSort_loop1:
+    inc ECX
+    cmp ECX, len
+    je insertionSort_done
+    
+    mov EBX, [ESI+ECX*4]
+    mov EDX, ECX
+    dec EDX
+    
+insertionSort_loop2:
+    cmp EDX, 0
+    jl insertionSort_loop2_done
+    
+    mov EDI, [ESI+EDX*4]
+    cmp EBX, EDI
+    jle insertionSort_loop2_done
+    
+shiftMemberRight:
+    mov [ESI+EDX*4+4], EDI
+    dec EDX
+    jmp insertionSort_loop2
+
+insertionSort_loop2_done:
+    mov [ESI+EDX*4+4], EBX
+    jmp insertionSort_loop1
             
-            mov EDI, [ESI+EDX*4]
-            cmp EBX, EDI
-            jle insertionSort_loop2_done
-            
-            shiftMemberRight:
-                mov [ESI+EDX*4+4], EDI
-                dec EDX
-                jmp insertionSort_loop2
-            
-            insertionSort_loop2_done:
-                mov [ESI+EDX*4+4], EBX
-                jmp insertionSort_loop1
-                
-    insertionSort_done:
-        pop ESI
-        pop EDI
-        pop EDX
-        pop ECX
-        pop EBX
-        leave
-        ret 8-0
+insertionSort_done:
+    pop ESI
+    pop EDI
+    pop EDX
+    pop ECX
+    pop EBX
+    leave
+    ret 8-0
+
 
 printArray:
     %define len DWORD [EBP+12]
@@ -142,21 +142,19 @@ printArray:
     mov ESI, array
     
     puts MSG_ARRAY_OUTPUT1
-    printArray_loop:
-        printMember:
-            puti [ESI]
-            
-            printMember_done:
-                dec len
-                jz printArray_done
-                
-                add ESI, 4
-                puts MSG_COMMA
-                jmp printArray_loop
-            
-    printArray_done:
-        puts MSG_ARRAY_OUTPUT2
+    
+printArray_loop:
+    puti [ESI]
+    dec len
+    jz printArray_done
+    
+    add ESI, 4
+    puts MSG_COMMA
+    jmp printArray_loop
         
-        pop ESI
-        leave
-        ret 8-0
+printArray_done:
+    puts MSG_ARRAY_OUTPUT2
+    
+    pop ESI
+    leave
+    ret 8-0
