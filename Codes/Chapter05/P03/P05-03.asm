@@ -2,11 +2,11 @@
 global _start
 
 section .data
-    num1_msg db "1th number: ", 0
-    num2_msg db "2th number: ", 0
-    num3_msg db "3th number: ", 0
+    num1_msg db "First number:  ", 0
+    num2_msg db "Second number: ", 0
+    num3_msg db "Third number:  ", 0
     max_msg db "Maximum number is ", 0
-    endl db 10
+    endl db 10, 0
 
 section .bss
     inp_buffer resb 12
@@ -16,16 +16,17 @@ _start:
     puts num1_msg
     fgets inp_buffer, 12
     a2i 12, inp_buffer
-    push eax        ; push 1th number onto stack
+    push eax        ; push first number onto stack
     puts num2_msg
     fgets inp_buffer, 12
     a2i 12, inp_buffer
-    push eax        ; push 2th number onto stack
+    push eax        ; push second number onto stack
     puts num3_msg
     fgets inp_buffer, 12
     a2i 12, inp_buffer
-    push eax        ; push 3th number onto stack
+    push eax        ; push third number onto stack
     call max
+    puts endl
     puts max_msg
     i2a eax, inp_buffer
     puts inp_buffer ; display maximum number returned in EAX
