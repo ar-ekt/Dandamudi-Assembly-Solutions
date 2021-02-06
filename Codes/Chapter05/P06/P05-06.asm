@@ -44,14 +44,14 @@ push_characters:
     jmp push_characters
 push_done:
     mov ebx, STRING
-pop_charactes:
+pop_characters:
     cmp [ebx], byte 0   ; check if we reached end of string
     je reverse_done
     pop ax              ; recive characters in backward order
     mov [ebx], al       ; and place them in original string in forward order
                         ; its logic: string[0] <- string[last_index + 0], string[1] <- string[last_index - 1] and so on ... 
     inc ebx             ; increase pointer to point to next character
-    jmp pop_charactes
+    jmp pop_characters
 reverse_done:
     pop ebx
     pop eax
