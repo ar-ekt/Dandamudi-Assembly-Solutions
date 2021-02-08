@@ -38,8 +38,8 @@ formula:
     shr edx, 1
     mov [rightHandSide], edx
 print_results:
-    mov eax, [leftHandSide]
-    i2a eax, outBuffer
+    mov edx, [leftHandSide]
+    i2a edx, outBuffer
     puts outMSG1
     puts outBuffer
     puts nwln
@@ -48,7 +48,6 @@ print_results:
     puts outMSG2
     puts outBuffer
     puts nwln
-    mov edx, [leftHandSide]
     cmp eax, edx
     je print_equal
     jmp finish
