@@ -124,10 +124,6 @@ matrixCyclicPermutation:
     enter 4, 0
     pushad
     
-    mov EAX, numCol
-    sub EAX, cycleN
-    mov colMinusCycle, EAX
-    
     mov EAX, cycleN
     cmp EAX, numCol
     jl permute
@@ -138,13 +134,16 @@ cycleLoop:
 
 permute:
     mov cycleN, EAX
+    mov EAX, numCol
+    sub EAX, cycleN
+    mov colMinusCycle, EAX
     mov ECX, 0-1
     
 rowLoop:
     inc ECX
     cmp ECX, numRow
     je matrixCyclicPermutation_end
-    mov EBX, 0-1
+    mov EBX, cycleN
 
 colLoop1:
     mov EAX, ECX
@@ -157,13 +156,13 @@ colLoop1:
     mov EAX, ECX
     mul numCol
     add EAX, EBX
-    add EAX, cycleN
+    sub EAX, cycleN
     shl EAX, 2
     add EAX, result
     mov [EAX], EDI
     
     inc EBX
-    cmp EBX, colMinusCycle
+    cmp EBX, numCol
     jne colLoop1
     
     mov EBX, 0-1
@@ -176,7 +175,6 @@ colLoop2:
     mov EAX, ECX
     mul numCol
     add EAX, EBX
-    add EAX, colMinusCycle
     shl EAX, 2
     add EAX, matrix
     mov EDI, [EAX]
@@ -184,6 +182,8 @@ colLoop2:
     mov EAX, ECX
     mul numCol
     add EAX, EBX
+    add EAX, numCol
+    sub EAx, cycleN
     shl EAX, 2
     add EAX, result
     mov [EAX], EDI
