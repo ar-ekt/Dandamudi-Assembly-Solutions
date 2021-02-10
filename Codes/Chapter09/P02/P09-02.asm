@@ -31,7 +31,7 @@ _start:
     jmp done                ; otherwise terminate program
 put_error_msg:
     puts error_msg
-done:                       ; otherwise, terminate program
+done:
     mov eax, 1
     mov ebx, 0
     int 0x80
