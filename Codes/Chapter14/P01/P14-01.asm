@@ -1,6 +1,4 @@
-;   Must run in linux OS
-
-%INCLUDE "lib.h"
+%INCLUDE "lib.h" ; no usage
 global _start
 
 %macro strlen 1
@@ -25,10 +23,11 @@ finished:
 %endmacro
 
 
-SIZE equ 30                 ;Maximum string size
+SIZE equ 30 ; Maximum string size
 
 section .data
     enter_string_msg db "Please enter a string: ",0
+    enter_string_msg_len equ $- enter_string_msg
 
 section .bss
     string resb SIZE
@@ -36,12 +35,24 @@ section .bss
 section .code
 _start:
 
-    puts enter_string_msg
-    fgets string, SIZE
+    ; sys_write     ; puts enter_string_msg
+    mov edx, enter_string_msg_len
+    mov ecx, enter_string_msg
+    mov ebx, 1
+    mov eax, 4
+    int 0x80
 
-    strlen string
 
-    ;sys_write
+    ; sys_read      ; fgets string, SIZE
+    mov ebx, 2
+    mov ecx, string  
+    mov edx, SIZE
+    mov eax, 3
+    int 80h
+
+    strlen string   ; result stores in eax register
+
+    ; sys_write     ; puts string
     mov	edx,eax		; message length
     mov	ecx,string	; message to write
     mov	ebx,1		; file descriptor (stdout)
