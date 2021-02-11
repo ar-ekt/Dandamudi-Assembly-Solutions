@@ -10,7 +10,7 @@ section .data
 
 section .bss
     inBuffer resb 100
-    tempBuffer resb 10
+    tempBuffer resb 100
     outBuffer resb 10
 
 section .code
