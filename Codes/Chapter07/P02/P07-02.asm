@@ -11,7 +11,7 @@ section .data
 section .bss
     inBuffer resb 100
     tempBuffer resb 100
-    outBuffer resb 10
+    outBuffer resb 5
 
 section .code
 _start:
@@ -38,7 +38,7 @@ finish_prog:
     push 0
     call ExitProcess
 
-;proc recursive_add_digits
+;proc recursive_add_digits -> recursively adds all digits of a number until the result fits in one digit
 recursive_add_digits:
     enter 0, 0
     pusha
@@ -66,7 +66,7 @@ finish_add:
     i2a EDX, EAX
     popa
     leave
-    ret 4
+    ret 8
 
 ;proc strcpy
 strcpy:
