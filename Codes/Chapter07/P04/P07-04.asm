@@ -25,7 +25,9 @@ _start:
 ;in AL register. All registers are preserved.
 ;-----------------------------------------------------------
 PutInt8:
-    push AX
+    push EAX
+    push EBX
+    push ECX
     xor AH, AH
     test AL, 80H
     jz print_first_digit
@@ -70,4 +72,7 @@ print_third_digit:
     puts outBuffer
     puts newline
 finish_proc:
+    pop ECX
+    pop EBX
+    pop EAX
     ret
