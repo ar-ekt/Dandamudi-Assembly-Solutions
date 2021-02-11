@@ -1,9 +1,13 @@
+;--------------------------------------------------;
+; uncomment lines 9-10 and 19-23 to test procedure ;
+;--------------------------------------------------;
+
 %INCLUDE "lib.h"
 global _start
 
 section .data
-    prompt_msg db "Please input a name in the format <first-name MI last-name>: ", 10, 0
-    result_msg db "The name in the format <last-name, first-name MI>: ", 10, 0
+;    prompt_msg db "Please input a name in the format <first-name MI last-name>: ", 10, 0
+;    result_msg db "The name in the format <last-name, first-name MI>: ", 10, 0
     comma_space db ', ', 0
     endl db 10, 0
 
@@ -12,11 +16,11 @@ section .bss
 
 section .code
 _start:
-    puts prompt_msg
-    fgets string, 41
-    push string
-    puts result_msg
-    call rearrange
+;    puts prompt_msg
+;    fgets string, 41
+;    push string
+;    puts result_msg
+;    call rearrange
     mov eax, 1
     mov ebx, 0
     int 0x80
