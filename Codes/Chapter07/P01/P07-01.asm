@@ -3,8 +3,8 @@ extern ExitProcess
 %include "lib.h"
 
 section .data
-    inMSG1 db "multiplicand (-128 < n < 127): ", 0
-    inMSG2 db "multiplier (-128 < n < 127): ", 0
+    inMSG1 db "multiplicand (-128 <= n <= 127): ", 0
+    inMSG2 db "multiplier (-128 <= n <= 127): ", 0
     outMSG db "result: ", 0
     negative_sign db "-", 0
     nwln db 10, 0
