@@ -48,6 +48,7 @@ get_average:
     mov cx, ax
     xor eax, eax
     mov ax, cx
+print_average:
     i2a eax, outBuffer
     puts outBuffer                  ;print the quotient
     puts point_sign
@@ -68,7 +69,7 @@ extra_zero:
     puts zero
 print_fractions:
     i2a eax, outBuffer
-    puts outBuffer                  ;print the remainder in franctions
+    puts outBuffer                  ;print the remainder in fractions
 finish_prog:
     puts nwln
     push 0
