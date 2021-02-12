@@ -50,10 +50,9 @@ hex_to_decimal:
     cmp al, 0
     je hex_to_binary_done
     cmp al, '9'
-    jle its_digit
+    jle hex_to_decimal_continue
     add al, 10 - 'A'
-its_digit:
-    sub al, '0'
+hex_to_decimal_continue:
     shl al, 4
     mov ecx, 4
 decimal_to_binary:
@@ -127,19 +126,22 @@ display_mantissa_loop:
 
 display_exponent:
     enter 0, 0
-    pusha
+    push eax
+    push ebx
+    push ecx
+    push edx
     puts expo_msg
-    mov esi, BINARY
-    inc esi
+    mov ebx, BINARY
+    inc ebx
     xor dl, dl
     mov ecx, 7
 get_exponent:
-    mov al, [esi]
+    mov al, [ebx]
     shl al, cl
     add dl, al
-    inc esi
+    inc ebx
     loop get_exponent
-    mov al, [esi]
+    mov al, [ebx]
     add dl, al
     sub dl, 127
     mov ah, 80h
@@ -148,10 +150,10 @@ convert_exponent_to_binary:
     test ah, dl
     jnz set_one
     mov [ebx], byte '0'
-    jmp skip_set_on
+    jmp skip_set_one
 set_one:
     mov [ebx], byte '1'
-skip_set_on:
+skip_set_one:
     inc ebx
     shr ah, 1
     jnz convert_exponent_to_binary
@@ -162,8 +164,17 @@ remove_leading_zeroes:
     inc ebx
     cmp [ebx], byte '0'
     je remove_leading_zeroes
+    cmp [ebx], byte 0
+    je zero_exponent
+    jmp display_exponent_done
+zero_exponent:
+    dec ebx
+display_exponent_done:
     puts ebx
     puts endl
-    popa
+    pop edx
+    pop ecx
+    pop ebx
+    pop eax
     leave
     ret 8
