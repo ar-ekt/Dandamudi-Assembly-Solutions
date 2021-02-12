@@ -12,13 +12,12 @@ section .data
     outMSG db "The number is at position ",0
     notFoundMSG db "Number not in the array!",0
     queryMSG db "Do you want to quit (Y/N): ",0
-    testing db "testing ", 10, 0
     nwln db 10, 0
 
 section .bss
     outBuffer resb 10
     tempBuffer resb 20
-    inBuffer resb 500
+    inBuffer resb 5*MAX_SIZE
     int_array resw MAX_SIZE
     size resd 1
 
@@ -26,7 +25,7 @@ section .code
 _start:
     puts inMSG1
     puts nwln
-    fgets inBuffer, 500
+    fgets inBuffer, 5*MAX_SIZE
     xor esi, esi
 get_size:
     mov al, [inBuffer+esi]
