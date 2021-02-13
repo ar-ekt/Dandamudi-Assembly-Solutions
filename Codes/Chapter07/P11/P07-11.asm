@@ -24,11 +24,11 @@ _start:
     puts enterLen
     fgets len,12
     a2i 12,len                      ;stores length in EAX
-    mov EBX,EAX                     ;move length in EBX
+    mov EBX,EAX                     ;move length to EBX
     puts enterWidth
     fgets width,12
     a2i 12,width                    ;stores width in EAX
-    mov EDX,EAX                     ;move width in EDX
+    mov EDX,EAX                     ;move width to EDX
     puts enterHeight
     fgets height,12
     a2i 12,height                   ;stores height in EAX
@@ -38,19 +38,19 @@ cal_volume:
     i2a EAX,resVolume               ;move result to resVolume
 cal_surfaceVolume:
     a2i 12,len                      ;stores length in EAX
-    mov EBX,EAX                     ;move length in EBX
+    mov EBX,EAX                     ;move length to EBX
     a2i 12,height                   ;stores height in EAX
     mul EBX                         ;(height * length) and stores result in EAX
     i2a EAX,res1                    ;move result to res1
 
     a2i 12,width                    ;stores width in EAX
-    mov EDX,EAX                     ;move width in EDX
+    mov EDX,EAX                     ;move width to EDX
     a2i 12,height                   ;stores height in EAX
     mul EDX                         ;(height * width) and stores result in EAX
     i2a EAX,res2                    ;move result to res2
 
     a2i 12,len                      ;stores length in EAX
-    mov EBX,EAX                     ;move length in EBX
+    mov EBX,EAX                     ;move length to EBX
     a2i 12,width                    ;stores width in EAX
     mul EBX                         ;(length * width) and stores result in EAX
     i2a EAX,res3                    ;move result to res3
