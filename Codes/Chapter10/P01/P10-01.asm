@@ -87,6 +87,9 @@ str_ncpy_done:
 str_len:
     %define string DWORD [EBP+8]
     enter 0, 0
+    push ECX
+    push EDI
+    push ES
     mov EDI, string
     mov ECX, 100
     cld
@@ -101,5 +104,8 @@ str_len:
 str_len_no_string:
     stc
 str_len_done:
+    pop ES
+    pop EDI
+    pop ECX
     leave
     ret 4
