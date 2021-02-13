@@ -76,6 +76,7 @@ print:
     puts newline
     puts surfaceVolumeMsg
     puts surfaceVolume
+    puts newline
 done:
     push 0
     call ExitProcess
