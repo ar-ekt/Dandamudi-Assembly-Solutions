@@ -28,17 +28,17 @@ section .bss
 section .code
 _start:
     puts MSG_STRING_INPUT
-    fgets string1, 100
+    fgets string2, 100
     puts MSG_NUM_INPUT
     geti
     
     push EAX
-    push string2
     push string1
+    push string2
     call str_ncpy
     
     puts MSG_OUTPUT
-    puts string2
+    puts string1
     puts NEWLINE
     
 _end:
@@ -46,8 +46,8 @@ _end:
     call ExitProcess
 
 str_ncpy:
-    %define string1 DWORD [EBP+8]
-    %define string2 DWORD [EBP+12]
+    %define string2 DWORD [EBP+8]
+    %define string1 DWORD [EBP+12]
     %define num DWORD [EBP+16]
     enter 0,0
     push ECX
@@ -55,7 +55,7 @@ str_ncpy:
     push ESI
     push DS
     push ES
-    mov ESI, string1
+    mov ESI, string2
     push DS
     push ESI
     call str_len
@@ -67,10 +67,10 @@ str_ncpy:
 num_lower:
     mov ECX, num
 str_ncpy_continue:
-    mov EDI, string2
+    mov EDI, string1
     cld
     rep movsb
-    mov EAX, string2
+    mov EAX, string1
     clc
     jmp SHORT str_ncpy_done
 str_ncpy_no_string:
