@@ -17,6 +17,7 @@ section .data
     
     MSG_STRING1_INPUT db "Enter first string: ", 0
     MSG_STRING2_INPUT db "Enter second string: ", 0
+    MSG_NUMBER_INPUT db "Enter maximum number of characters to compare: ", 0
     
     MSG_OUTPUT db "Result: ", 0
     
@@ -31,6 +32,8 @@ _start:
     fgets string1, 100
     puts MSG_STRING2_INPUT
     fgets string2, 100
+    puts MSG_NUMBER_INPUT
+    geti
     
     push EAX
     push string2
@@ -60,8 +63,14 @@ str_ncmp:
     push EDI
     call str_len
     jc str_ncmp_no_string
-    mov ECX,EAX
+    cmp num, EAX
+    jl num_lower
+    mov ECX, EAX
     inc ECX
+    jmp str_ncmp_continue
+num_lower:
+    mov ECX, num
+str_ncmp_continue:
     mov ESI, string1
     cld
     repe cmpsb
