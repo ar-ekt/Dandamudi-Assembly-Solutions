@@ -33,8 +33,8 @@ _start:
     geti
     
     push EAX
-    push string1
     push string2
+    push string1
     call str_ncpy
     
     puts MSG_OUTPUT
@@ -55,7 +55,7 @@ str_ncpy:
     push ESI
     push DS
     push ES
-    mov ESI, string2
+    mov ESI, string1
     push DS
     push ESI
     call str_len
@@ -67,10 +67,10 @@ str_ncpy:
 num_lower:
     mov ECX, num
 str_ncpy_continue:
-    mov EDI, string1
+    mov EDI, string2
     cld
     rep movsb
-    mov EAX, string1
+    mov EAX, string2
     clc
     jmp SHORT str_ncpy_done
 str_ncpy_no_string:
