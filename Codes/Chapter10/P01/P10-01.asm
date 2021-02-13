@@ -15,8 +15,8 @@ extern ExitProcess
 section .data
     NEWLINE db 10, 0
     
-    MSG_STRING_INPUT db "Enter string: ", 0
-    MSG_NUM_INPUT db "Enter number: ", 0
+    MSG_STRING_INPUT db "Enter string to be copied: ", 0
+    MSG_NUM_INPUT db "Enter number of characters to be copied from source: ", 0
     
     MSG_OUTPUT db "Result: ", 0
     
