@@ -11,7 +11,6 @@ section .data
     MSG_OUTPUT db "Result: ", 0
     
 section .bss
-    buffer resb MAX_STRING_SIZE
     string resb MAX_STRING_SIZE
 
 section .code
@@ -20,7 +19,7 @@ _start:
     fgets string, MAX_STRING_SIZE
     
     push string
-    call str_cln_blnks
+    call str_clean_blanks
     
     puts MSG_OUTPUT
     puts string
@@ -30,7 +29,7 @@ _end:
     push DWORD 0
     call ExitProcess
 
-str_cln_blnks:
+str_clean_blanks:
     %define string DWORD [EBP+8]
     enter 0,0
     push ECX
@@ -40,25 +39,24 @@ str_cln_blnks:
     push ES
     
     mov ESI, string
+    mov EDI, string
     
     push ESI
     call str_len
-    jc str_cln_blnks_no_string
+    jc str_clean_blanks_no_string
     mov EBX, EAX
     add EBX, ESI
     mov [EBX], BYTE SPACE
     
-    mov EDI, buffer
-    
 mov_loop:
     push ESI
-    call str_frst_non_blank
+    call first_non_blank
     cmp EAX, 0
     je mov_loop_done
     add ESI, EAX
     
     push ESI
-    call str_frst_blank
+    call first_blank
     mov ECX, EAX
     cld
     rep movsb
@@ -71,20 +69,13 @@ mov_loop:
     jmp mov_loop
     
 mov_loop_done:
-    mov ESI, buffer
-    push ESI
-    call str_len
-    mov ECX, EAX
-    mov EDI, string
-    cld
-    rep movsb
     mov [EDI], BYTE 0
     mov EAX, string
     clc
-    jmp SHORT str_cln_blnks_done
-str_cln_blnks_no_string:
+    jmp SHORT str_clean_blanks_done
+str_clean_blanks_no_string:
     stc
-str_cln_blnks_done:
+str_clean_blanks_done:
     pop ES
     pop DS
     pop ESI
@@ -93,7 +84,7 @@ str_cln_blnks_done:
     leave
     ret 12
 
-str_frst_blank:
+first_blank:
     %define string DWORD [EBP+8]
     enter 0, 0
     push EDI
@@ -103,21 +94,21 @@ str_frst_blank:
     cld
     mov AL, SPACE
     repne scasb
-    jcxz str_frst_blank_no_string
+    jcxz first_blank_no_string
     dec EDI
     mov EAX, EDI
     sub EAX, string
     clc
-    jmp SHORT str_frst_blank_done
-str_frst_blank_no_string:
+    jmp SHORT first_blank_done
+first_blank_no_string:
     stc
-str_frst_blank_done:
+first_blank_done:
     pop ES
     pop EDI
     leave
     ret 4
 
-str_frst_non_blank:
+first_non_blank:
     %define string DWORD [EBP+8]
     enter 0, 0
     push ECX
@@ -128,15 +119,15 @@ str_frst_non_blank:
     cld
     mov AL, SPACE
     repe scasb
-    jcxz str_frst_non_blank_no_string
+    jcxz first_non_blank_no_string
     dec EDI
     mov EAX, EDI
     sub EAX, string
     clc
-    jmp SHORT str_frst_non_blank_done
-str_frst_non_blank_no_string:
+    jmp SHORT first_non_blank_done
+first_non_blank_no_string:
     stc
-str_frst_non_blank_done:
+first_non_blank_done:
     pop ES
     pop EDI
     pop ECX
