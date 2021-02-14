@@ -2,16 +2,6 @@ global _start
 extern ExitProcess
 %INCLUDE "lib.h"
 
-%macro geti 0
-    fgets buffer, 15
-    a2i 15, buffer
-%endmacro
-
-%macro puti 1
-    i2a DWORD %1, buffer
-    puts buffer
-%endmacro
-
 section .data
     NEWLINE db 10, 0
     
@@ -21,20 +11,18 @@ section .data
     
 section .bss
     buffer resb 100
-    string1 resb 100
-    string2 resb 100
+    string resb 100
 
 section .code
 _start:
     puts MSG_STRING_INPUT
-    fgets string2, 100
+    fgets string, 100
     
-    push string1
-    push string2
+    push string
     call str_cln_leading_blnks
     
     puts MSG_OUTPUT
-    puts string1
+    puts string
     puts NEWLINE
     
 _end:
@@ -42,29 +30,38 @@ _end:
     call ExitProcess
 
 str_cln_leading_blnks:
-    %define string2 DWORD [EBP+8]
-    %define string1 DWORD [EBP+12]
+    %define string DWORD [EBP+8]
     enter 0,0
     push ECX
     push EDI
     push ESI
     push DS
     push ES
-    mov ESI, string2
-    push DS
+    
+    mov ESI, string
     push ESI
     call str_frst_non_blank
     jc str_cln_leading_blnks_no_string
     add ESI, EAX
-    push DS
+    
     push ESI
     call str_len
     jc str_cln_leading_blnks_no_string
     mov ECX, EAX
-    mov EDI, string1
+    mov EDI, buffer
     cld
     rep movsb
-    mov EAX, string1
+    
+copy:
+    mov ESI, buffer
+    push ESI
+    call str_len
+    mov ECX, EAX
+    mov EDI, string
+    cld
+    rep movsb
+    mov [EDI], BYTE 0
+    mov EAX, buffer
     clc
     jmp SHORT str_cln_leading_blnks_done
 str_cln_leading_blnks_no_string:
