@@ -1,7 +1,6 @@
 
 ;the use of xlat alongside the indirect jump instruction provides a more compact and readable method of performing conditional jumps
-;the indirect jump instruction can be used as an alternative for high level languages' switch case function
-
+;the indirect jump instruction can be used as an alternative for high level languages' switch case statement
 
 global _start
 extern ExitProcess
