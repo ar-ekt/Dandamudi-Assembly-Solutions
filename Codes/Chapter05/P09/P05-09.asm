@@ -8,20 +8,23 @@ section .data
     outMSG db "leading and duplicate blanks removed:", 0
 
 section .bss
-    buffer1 resb 102
-    buffer2 resb 102
+    inBuffer resb 102
+    tempBuffer resb 102
 
 section .code
 _start:
     puts inMSG
     puts nwln
-    fgets buffer1, 102
-    push buffer1
-    push buffer2
+    fgets inBuffer, 102
+    push inBuffer
+    push tempBuffer
+    call strcpy
+    push tempBuffer
+    push inBuffer
     call clean_string
     puts outMSG
     puts nwln
-    puts buffer2
+    puts inBuffer
     puts nwln
     push 0
     call ExitProcess
@@ -95,5 +98,25 @@ finish:
     pop DX
     pop EBX
     pop EAX
+    leave
+    ret 8
+
+;proc strcpy -> copy the string from src to dest
+strcpy:
+    enter 0, 0
+    pusha
+    mov EBX, [EBP+8]
+    mov EAX, [EBP+12]
+    xor ESI, ESI
+char_loop:
+    mov DL, [EAX+ESI]
+    cmp DL, 0
+    je finish_copy
+    mov [EBX,ESI], DL
+    inc ESI
+    jmp char_loop
+finish_copy:
+    mov [EBX+ESI], byte 0
+    popa
     leave
     ret 8
