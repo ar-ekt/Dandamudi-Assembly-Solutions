@@ -3,6 +3,7 @@ extern ExitProcess
 %INCLUDE "lib.h"
 
 section .data
+    MAX_STRING_SIZE EQU 100
     NEWLINE db 10, 0
     
     MSG_STRING_INPUT db "Enter string: ", 0
@@ -10,13 +11,13 @@ section .data
     MSG_OUTPUT db "Result: ", 0
     
 section .bss
-    buffer resb 100
-    string resb 100
+    buffer resb MAX_STRING_SIZE
+    string resb MAX_STRING_SIZE
 
 section .code
 _start:
     puts MSG_STRING_INPUT
-    fgets string, 100
+    fgets string, MAX_STRING_SIZE
     
     push string
     call str_cln_leading_blnks
@@ -82,7 +83,7 @@ str_frst_non_blank:
     push EDI
     push ES
     mov EDI, string
-    mov ECX, 100
+    mov ECX, MAX_STRING_SIZE
     cld
     mov AL, 32
     repe scasb
@@ -108,7 +109,7 @@ str_len:
     push EDI
     push ES
     mov EDI, string
-    mov ECX, 100
+    mov ECX, MAX_STRING_SIZE
     cld
     mov AL, 0
     repne scasb
