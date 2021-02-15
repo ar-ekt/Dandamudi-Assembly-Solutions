@@ -9,7 +9,7 @@ extern ExitProcess
 MAX_SIZE EQU 100
 
 section .data
-    input_prompt db "Please enter input array (negative number terminates input):", 0
+    input_prompt db "Please enter input array in ascending order (negative number terminates input):", 0
     query_number db "Enter the number to be searched: ", 0
     out_msg db "The number is at position ", 0
     not_found_msg db "Number not in the array!", 0
