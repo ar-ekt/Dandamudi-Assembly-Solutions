@@ -9,13 +9,14 @@ extern ExitProcess
 
 section .data
     MAX_STRING_SIZE EQU 100
-    NEWLINE db 10, 0
-    SPACE db 32, 0
-    LINE db "|", 0
+    NULL EQU 0
     
-    MSG_STRING_INPUT db "Enter string: ", 0
-    MSG_SUBSTRING_INPUT db "Enter substring: ", 0
-    MSG_OUTPUT db "Result: ", 0
+    NEWLINE db 10, NULL
+    SPACE db 32, NULL
+    
+    MSG_STRING_INPUT db "Enter string: ", NULL
+    MSG_SUBSTRING_INPUT db "Enter substring: ", NULL
+    MSG_OUTPUT db "Result: ", NULL
     
 section .bss
     buffer resb MAX_STRING_SIZE
@@ -41,95 +42,141 @@ _end:
     push DWORD 0
     call ExitProcess
 
+;-----------------------proc str_str---------------------------;
+; Receives two string pointers. If substring is not a string,  ;
+; CF is set otherwise, search substring in string and if found ;
+; return the starting position of the first match in EAX with  ;
+; CF = 0 as shown below:                                       ;
+;--------------------------------------------------------------;
 str_str:
     %define string DWORD [EBP+8]
-    %define sub_string DWORD [EBP+12]
-    enter 0,0
+    %define substring DWORD [EBP+12]
+    enter 0, 0
     push EBX
+    push ECX
     push ESI
     push EDI
-    mov EDI, sub_string
-    mov ESI, string
+    mov EDI, substring            ; copy substring pointer to EDI
+    mov ESI, string               ; copy string pointer to ESI
+    push EDI
+    call str_len                  ; substring length
+    jc str_str_no_string
+    mov ECX, EAX                  ; substring length in ECX
     xor EBX, EBX
     dec ESI
-find_loop:
+str_str_loop:
     inc EBX
     inc ESI
-    cmp [ESI], BYTE 0
-    je sub_string_not_found
-    push EDI
+    cmp [ESI], BYTE NULL          ; if ESI is pointing to the end of string its mean is substring have not founded
+    je substring_not_found
+    push ECX
     push ESI
-    call str_cmp
+    push EDI
+    call str_ncmp                 ; check if substring and ESI are equal, substring have founded
     cmp EAX, 0
-    je sub_string_found
-    jmp find_loop
-sub_string_not_found:
-    mov EAX, -1
+    je substring_found
+    jmp str_str_loop
+substring_not_found:
+    mov EAX, -1                   ; EAX = -1 => substring have not founded
     jmp str_str_done
-sub_string_found:
-    mov EAX, EBX
+substring_found:
+    mov EAX, EBX                  ; EAX = EBX => substring have founded and EAX is pointing to the starting position of the first match
+    jmp str_str_done
+str_str_no_string:
+    stc                           ; carry set => no string
 str_str_done:
     pop EDI
     pop ESI
+    pop ECX
     pop EBX
     leave
-    ret 8
+    ret 8                         ; clear stack and return
 
-str_cmp:
-    %define string1 DWORD [EBP+8]
-    %define string2 DWORD [EBP+12]
+;-----------------------proc str_ncmp----------------------;
+; Receives two string pointers If string2 is not a string, ;
+; CF is set otherwise, compare at most the first num       ;
+; characters of the two strings and returns a value in EAX ;
+; with CF = 0 as shown below:                              ;
+; EAX = negative value if string1 < string2                ;
+; EAX = zero if string1 = string2                          ;
+; EAX = positive value if string1 > string2                ;
+;-----------------------------------------------------------
+str_ncmp:
+    %define string2 DWORD [EBP+8]
+    %define string1 DWORD [EBP+12]
+    %define num DWORD [EBP+16]
     enter 0, 0
     push ECX
     push EDI
     push ESI
-    mov EDI, string2
-    push EDI
-    call str_len
-    jc str_cmp_no_string
+    
+    mov EDI, string1              ; copy string1 pointer to EDI
+    mov ESI, string2              ; copy string2 pointer to ESI
+    push ESI
+    call str_len                  ; string2 length
+    jc str_ncmp_no_string
+                                  ; ECX = min(num, string2_length)
+    cmp num, EAX
+    jle str_ncmp_num_lower
+    jmp str_ncmp_length_lower
+str_ncmp_num_lower:
+    mov ECX, num
+    jmp str_ncmp_continue
+str_ncmp_length_lower:
     mov ECX, EAX
-    dec ECX
-    mov ESI, string1
-    cld
-    repe cmpsb
+    inc ECX                       ; add 1 to include NULL
+    jmp str_ncmp_continue
+str_ncmp_continue:
+    cld                           ; forward direction
+    repe cmpsb                    ; compare first ECX characters of string2 and string1
     je same
-not_same:
-    mov EAX, 1
-    clc
-    jmp SHORT str_cmp_done
+    ja above
+    jmp below
+below:
+    mov EAX, -1                   ; EAX = -1 => string1 < string2
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_ncmp_done
 same:
-    xor EAX, EAX
-    clc
-    jmp SHORT str_cmp_done
-str_cmp_no_string:
-    stc
-str_cmp_done:
+    xor EAX, EAX                  ; EAX = 0 => string match
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_ncmp_done
+above:
+    mov EAX, 1                    ; EAX = 1 => string1 > string2
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_ncmp_done
+str_ncmp_no_string:
+    stc                           ; carry set => no string 
+str_ncmp_done:
     pop ESI
     pop EDI
     pop ECX
     leave
-    ret 8
+    ret 12                        ; clear stack and return
 
+;-----------------------proc str_len-----------------------;
+; Receives a string pointer. If not a string, CF is set    ;
+; otherwise, string length is returned in EAX with CF = 0. ;
+;----------------------------------------------------------;
 str_len:
-    %define string DWORD [EBP+8]
+    %define string1 DWORD [EBP+8]
     enter 0, 0
     push ECX
     push EDI
-    mov EDI, string
-    mov ECX, MAX_STRING_SIZE
-    cld
-    mov AL, 0
+    mov EDI, string1              ; copy string pointer to EDI
+    mov ECX, MAX_STRING_SIZE      ; need to terminate loop if EDI is not pointing to a string
+    cld                           ; forward search
+    mov AL, NULL                  ; NULL character
     repne scasb
-    jcxz str_len_no_string
-    dec EDI
+    jcxz str_len_no_string        ; if ECX = 0, not a string
+    dec EDI                       ; back up to point to NULL
     mov EAX, EDI
-    sub EAX, string
-    inc EAX
-    clc
-    jmp SHORT str_len_done
+    sub EAX, string1              ; string length in EAX
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_len_done 
 str_len_no_string:
-    stc
+    stc                           ; carry set => no string
 str_len_done:
     pop EDI
     pop ECX
     leave
-    ret 4
+    ret 4                         ; clear stack and return

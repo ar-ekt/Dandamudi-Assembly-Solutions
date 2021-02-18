@@ -9,12 +9,14 @@ extern ExitProcess
 
 section .data
     MAX_STRING_SIZE EQU 100
-    NEWLINE db 10, 0
-    SPACE db 32, 0
+    NULL EQU 0
     
-    MSG_STRING1_INPUT db "Enter first string: ", 0
-    MSG_STRING2_INPUT db "Enter second string: ", 0
-    MSG_OUTPUT db "Result: ", 0
+    NEWLINE db 10, NULL
+    SPACE db 32, NULL
+    
+    MSG_STRING1_INPUT db "Enter first string: ", NULL
+    MSG_STRING2_INPUT db "Enter second string: ", NULL
+    MSG_OUTPUT db "Result: ", NULL
     
 section .bss
     buffer resb MAX_STRING_SIZE
@@ -40,106 +42,131 @@ _end:
     push DWORD 0
     call ExitProcess
 
+;----------------------proc str_match-----------------------;
+; Receives two string pointers. string1 and string2 are     ;
+; compared case-insensitive and returns a value in EAX      ;
+; as shown below:                                           ;
+; EAX = negative value if string1 < string2                 ;
+; EAX = zero if string1 = string2                           ;
+; EAX = positive value if string1 > string2                 ;
+;-----------------------------------------------------------;
 str_match:
     %define string1 DWORD [EBP+8]
     %define string2 DWORD [EBP+12]
-    enter 0,0
+    enter 0, 0
     
     push string1
     call str_upper
-    
     push string2
     call str_upper
-    
     push string1
     push string2
     call str_cmp
 str_match_done:
     leave
-    ret 8
+    ret 8                         ; clear stack and return
 
+;-----------------------proc str_cmp------------------------;
+; Receives two string pointers. If string2 is not a string, ;
+; CF is set otherwise, string1 and string2 are compared and ;
+; returns a value in EAX with CF = 0 as shown below:        ;
+; EAX = negative value if string1 < string2                 ;
+; EAX = zero if string1 = string2                           ;
+; EAX = positive value if string1 > string2                 ;
+;-----------------------------------------------------------;
 str_cmp:
-    %define string1 DWORD [EBP+8]
-    %define string2 DWORD [EBP+12]
+    %define string2 DWORD [EBP+8]
+    %define string1 DWORD [EBP+12]
     enter 0, 0
     push ECX
     push EDI
     push ESI
-    mov EDI, string2
-    push EDI
-    call str_len
+    mov EDI, string1              ; copy string1 pointer to EDI
+    mov ESI, string2              ; copy string2 pointer to ESI
+    push ESI
+    call str_len                  ; string2 length
     jc str_cmp_no_string
-    mov ECX, EAX
-    inc ECX
-    mov ESI, string1
-    cld
-    repe cmpsb
+    mov ECX, EAX                  ; string2 length in ECX
+    inc ECX                       ; add 1 to include NULL
+    cld                           ; forward direction
+    repe cmpsb                    ; compare first ECX characters of string2 and string1
     je same
-not_same:
-    mov EAX, 1
-    clc
+    ja above
+    jmp below
+below:
+    mov EAX, -1                   ; EAX = -1 => string1 < string2
+    clc                           ; clear carry to indicate no error
     jmp SHORT str_cmp_done
 same:
-    xor EAX, EAX
-    clc
+    xor EAX, EAX                  ; EAX = 0 => string match
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_cmp_done
+above:
+    mov EAX, 1                    ; EAX = 1 => string1 > string2
+    clc                           ; clear carry to indicate no error
     jmp SHORT str_cmp_done
 str_cmp_no_string:
-    stc
+    stc                           ; carry set => no string 
 str_cmp_done:
     pop ESI
     pop EDI
     pop ECX
     leave
-    ret 8
+    ret 8                         ; clear stack and return
 
+;------------------proc str_upper-------------------;
+; Receives a string pointer. Converts all lowercase ;
+; characters to uppercase.                          ;
+;---------------------------------------------------;
 str_upper:
     %define string DWORD [EBP+8]
     enter 0, 0
     push ESI
     push EBX
-    mov ESI, string
+    mov ESI, string               ; copy string pointer to ESI
     dec ESI
-upper_loop:
+str_upper_loop:
     inc ESI
-    cmp [ESI], BYTE 0
+    cmp [ESI], BYTE NULL          ; check end of string
     je str_upper_done
     cmp [ESI], BYTE 'a'
-    jl upper_loop
+    jl str_upper_loop
     cmp [ESI], BYTE 'z'
-    jg upper_loop
-is_lower:
+    jg str_upper_loop
     mov EBX, [ESI]
-    sub EBX, 32
+    sub EBX, 32                   ; convert to uppercase
     mov [ESI], EBX
-    jmp upper_loop
+    jmp str_upper_loop
 str_upper_done:
     pop EBX
     pop ESI
     leave
-    ret 4
+    ret 4                         ; clear stack and return
 
+;-----------------------proc str_len-----------------------;
+; Receives a string pointer. If not a string, CF is set    ;
+; otherwise, string length is returned in EAX with CF = 0. ;
+;----------------------------------------------------------;
 str_len:
-    %define string DWORD [EBP+8]
+    %define string1 DWORD [EBP+8]
     enter 0, 0
     push ECX
     push EDI
-    push ES
-    mov EDI, string
-    mov ECX, MAX_STRING_SIZE
-    cld
-    mov AL, 0
+    mov EDI, string1              ; copy string pointer to EDI
+    mov ECX, MAX_STRING_SIZE      ; need to terminate loop if EDI is not pointing to a string
+    cld                           ; forward search
+    mov AL, NULL                  ; NULL character
     repne scasb
-    jcxz str_len_no_string
-    dec EDI
+    jcxz str_len_no_string        ; if ECX = 0, not a string
+    dec EDI                       ; back up to point to NULL
     mov EAX, EDI
-    sub EAX, string
-    clc
-    jmp SHORT str_len_done
+    sub EAX, string1              ; string length in EAX
+    clc                           ; clear carry to indicate no error
+    jmp SHORT str_len_done 
 str_len_no_string:
-    stc
+    stc                           ; carry set => no string
 str_len_done:
-    pop ES
     pop EDI
     pop ECX
     leave
-    ret 4
+    ret 4                         ; clear stack and return
