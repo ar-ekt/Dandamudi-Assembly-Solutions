@@ -14,7 +14,7 @@ section .data
     NEWLINE db 10, NULL
     SPACE db 32, NULL
     
-    MSG_STRING_INPUT db "Enter name: ", NULL
+    MSG_STRING_INPUT db "Enter sentence: ", NULL
     MSG_OUTPUT db "Result: ", NULL
     
 section .bss
