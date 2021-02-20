@@ -36,11 +36,11 @@ _end:
     push DWORD 0
     call ExitProcess
 
-;--------------------proc is_palindrome--------------------;
-; Receives a string pointer. If not a string, CF is set    ;
-; otherwise, remove blanks, punctuation marks and converts ;
-; all uppercase characters to lowercase with CF = 0.       ;
-;----------------------------------------------------------;
+;--------------------proc is_palindrome---------------------;
+; Receives a string pointer. If not a string, CF is set     ;
+; otherwise, returns 1 in EAX if the string is a palindrome ;
+; otherwise, it returns 0 with CF = 0.                      ;
+;-----------------------------------------------------------;
 is_palindrome:
     %define string DWORD [EBP+8]
     enter 0, 0

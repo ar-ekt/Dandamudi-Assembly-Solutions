@@ -27,15 +27,6 @@ _start:
     push name
     call rearrange_name
     
-    puts MSG_OUTPUT
-    puts lastName
-    puts COMMA
-    puts SPACE
-    puts firstName
-    puts SPACE
-    puts MI
-    puts NEWLINE
-    
 _end:
     push DWORD 0
     call ExitProcess
@@ -86,6 +77,14 @@ seprate_lastName:                 ; copy last part of name to lastName
     push lastName
     call str_upper
 rearrange_name_done:
+    puts MSG_OUTPUT
+    puts lastName
+    puts COMMA
+    puts SPACE
+    puts firstName
+    puts SPACE
+    puts MI
+    puts NEWLINE
     pop EAX
     pop ESI
     leave
