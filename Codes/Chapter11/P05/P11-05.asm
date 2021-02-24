@@ -245,4 +245,4 @@ finish_reverse:
     mov [edx+esi], byte 0
     popa
     leave
-    ret 8
+    ret 12
