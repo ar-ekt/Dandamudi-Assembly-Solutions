@@ -1,0 +1,1 @@
+or al, 30h ; if we replace the upper four bits with 0011, we get the ASCII representation
