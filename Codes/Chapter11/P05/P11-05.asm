@@ -28,6 +28,7 @@ _start:
     fgets number1, 50
     puts inMSG2
     fgets number2, 50
+    puts outMSG
 reverse_strings:                    ;we temporarily reverse the strings so the subtraction is easier to handle
     push len_num1
     push number1
@@ -111,7 +112,7 @@ finish_prog:
     call ExitProcess
 
 
-;proc compare -> compares the two numbers receives via stack
+;proc compare -> compares the two numbers received via stack
 ;places the bigger one in reverse_num1, and the smaller one in reverse_num2
 ;if initially number1 < number2, sign_flag will be set
 
