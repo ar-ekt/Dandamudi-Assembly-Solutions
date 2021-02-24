@@ -1,0 +1,1 @@
+and al, 0Fh ; if we mask off the upper four bits, we get the unpacked BCD representation
