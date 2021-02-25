@@ -18,7 +18,7 @@
 ## :bookmark: Chapter 5
 |   No.      |   Question                                                                                                   |   Code                                                                                                        |
 |   :---:    |   :---:                                                                                                      |   :---:                                                                                                       |
-|           1*|   [Q05-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P01/Q05-01.md)   |   [P05-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P01/P05-01.asm)   |
+|           1|   [Q05-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P01/Q05-01.md)   |   [P05-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Codes/Chapter05/P01/P05-01)       |
 |           2|   [Q05-02](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P02/Q05-02.md)   |   [P05-02](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P02/P05-02.asm)   |
 |           3|   [Q05-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P03/Q05-03.md)   |   [P05-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P03/P05-03.asm)   |
 |           4|   [Q05-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P04/Q05-04.md)   |   [P05-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P04/P05-04.asm)   |
