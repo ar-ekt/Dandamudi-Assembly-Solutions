@@ -1,6 +1,334 @@
 # :open_book: Dandamudi-Assembly-Solutions
 <p align="center"><img src="https://user-images.githubusercontent.com/57006850/109093669-fc983800-772d-11eb-9081-de57712d3d38.jpg"/></img></p>
 
+# :question: Questions-test2
+<table>
+  <tr>
+    <td align="center" rowspan="2"><b>No.</b></td>
+    <td align="center" colspan="2"><b>Chapter 4</b></td>
+    <td align="center" colspan="2"><b>Chapter 5</b></td>
+    <td align="center" colspan="2"><b>Chapter 6</b></td>
+    <td align="center" colspan="2"><b>Chapter 7</b></td>
+    <td align="center" colspan="2"><b>Chapter 8</b></td>
+    <td align="center" colspan="2"><b>Chapter 9</b></td>
+    <td align="center" colspan="2"><b>Chapter 10</b></td>
+    <td align="center" colspan="2"><b>Chapter 11</b></td>
+    <td align="center" colspan="2"><b>Chapter 14</b></td>
+    <td align="center" colspan="2"><b>Chapter 15</b></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+    <td align="center"><b>Question</b></td><td align="center"><b>&nbsp;&nbsp;Code&nbsp;&nbsp;</b></td>
+  </tr>
+  <tr>
+    <td align="center"><b>1</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P01/Q04-01.md">Q04-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P01/P04-01.md">P04-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P01/Q05-01.md">Q05-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P01/P05-01.md">P05-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P01/Q06-01.md">Q06-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P01/P06-01.md">P06-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P01/Q07-01.md">Q07-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P01/P07-01.md">P07-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P01/Q08-01.md">Q08-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P01/P08-01.md">P08-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P01/Q09-01.md">Q09-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P01/P09-01.md">P09-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P01/Q10-01.md">Q10-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P01/P10-01.md">P10-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P01/Q11-01.md">Q11-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P01/P11-01.md">P11-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P01/Q14-01.md">Q14-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P01/P14-01.md">P14-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P01/Q15-01.md">Q15-01</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P01/P15-01.md">P15-01</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>2</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P02/Q04-02.md">Q04-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P02/P04-02.md">P04-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P02/Q05-02.md">Q05-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P02/P05-02.md">P05-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P02/Q06-02.md">Q06-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P02/P06-02.md">P06-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P02/Q07-02.md">Q07-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P02/P07-02.md">P07-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P02/Q08-02.md">Q08-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P02/P08-02.md">P08-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P02/Q09-02.md">Q09-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P02/P09-02.md">P09-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P02/Q10-02.md">Q10-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P02/P10-02.md">P10-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P02/Q11-02.md">Q11-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P02/P11-02.md">P11-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P02/Q14-02.md">Q14-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P02/P14-02.md">P14-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P02/Q15-02.md">Q15-02</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P02/P15-02.md">P15-02</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>3</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P03/Q04-03.md">Q04-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P03/P04-03.md">P04-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P03/Q05-03.md">Q05-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P03/P05-03.md">P05-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P03/Q06-03.md">Q06-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P03/P06-03.md">P06-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P03/Q07-03.md">Q07-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P03/P07-03.md">P07-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P03/Q08-03.md">Q08-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P03/P08-03.md">P08-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P03/Q09-03.md">Q09-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P03/P09-03.md">P09-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P03/Q10-03.md">Q10-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P03/P10-03.md">P10-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P03/Q11-03.md">Q11-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P03/P11-03.md">P11-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P03/Q14-03.md">Q14-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P03/P14-03.md">P14-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P03/Q15-03.md">Q15-03</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P03/P15-03.md">P15-03</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>4</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P04/Q04-04.md">Q04-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P04/P04-04.md">P04-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P04/Q05-04.md">Q05-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P04/P05-04.md">P05-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P04/Q06-04.md">Q06-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P04/P06-04.md">P06-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P04/Q07-04.md">Q07-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P04/P07-04.md">P07-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P04/Q08-04.md">Q08-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P04/P08-04.md">P08-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P04/Q09-04.md">Q09-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P04/P09-04.md">P09-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P04/Q10-04.md">Q10-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P04/P10-04.md">P10-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P04/Q11-04.md">Q11-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P04/P11-04.md">P11-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P04/Q14-04.md">Q14-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P04/P14-04.md">P14-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P04/Q15-04.md">Q15-04</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P04/P15-04.md">P15-04</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>5</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P05/Q04-05.md">Q04-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P05/P04-05.md">P04-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P05/Q05-05.md">Q05-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P05/P05-05.md">P05-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P05/Q06-05.md">Q06-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P05/P06-05.md">P06-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P05/Q07-05.md">Q07-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P05/P07-05.md">P07-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P05/Q08-05.md">Q08-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P05/P08-05.md">P08-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P05/Q09-05.md">Q09-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P05/P09-05.md">P09-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P05/Q10-05.md">Q10-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P05/P10-05.md">P10-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P05/Q11-05.md">Q11-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P05/P11-05.md">P11-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P05/Q14-05.md">Q14-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P05/P14-05.md">P14-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P05/Q15-05.md">Q15-05</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P05/P15-05.md">P15-05</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>6</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P06/Q04-06.md">Q04-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P06/P04-06.md">P04-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P06/Q05-06.md">Q05-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P06/P05-06.md">P05-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P06/Q06-06.md">Q06-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P06/P06-06.md">P06-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P06/Q07-06.md">Q07-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P06/P07-06.md">P07-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P06/Q08-06.md">Q08-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P06/P08-06.md">P08-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P06/Q09-06.md">Q09-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P06/P09-06.md">P09-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P06/Q10-06.md">Q10-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P06/P10-06.md">P10-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P06/Q11-06.md">Q11-06</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P06/P11-06.md">P11-06</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>7</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P07/Q04-07.md">Q04-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P07/P04-07.md">P04-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P07/Q05-07.md">Q05-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P07/P05-07.md">P05-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P07/Q06-07.md">Q06-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P07/P06-07.md">P06-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P07/Q07-07.md">Q07-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P07/P07-07.md">P07-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P07/Q08-07.md">Q08-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter08/P07/P08-07.md">P08-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P07/Q09-07.md">Q09-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P07/P09-07.md">P09-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P07/Q10-07.md">Q10-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P07/P10-07.md">P10-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P07/Q11-07.md">Q11-07</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P07/P11-07.md">P11-07</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>8</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P08/Q04-08.md">Q04-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P08/P04-08.md">P04-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P08/Q05-08.md">Q05-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P08/P05-08.md">P05-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P08/Q06-08.md">Q06-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P08/P06-08.md">P06-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P08/Q07-08.md">Q07-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P08/P07-08.md">P07-08</a></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P08/Q09-08.md">Q09-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P08/P09-08.md">P09-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P08/Q10-08.md">Q10-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P08/P10-08.md">P10-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P08/Q11-08.md">Q11-08</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P08/P11-08.md">P11-08</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>9</b></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/Q04-09.md">Q04-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/P04-09.md">P04-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P09/Q05-09.md">Q05-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P09/P05-09.md">P05-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P09/Q06-09.md">Q06-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P09/P06-09.md">P06-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P09/Q07-09.md">Q07-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P09/P07-09.md">P07-09</a></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P09/Q09-09.md">Q09-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter09/P09/P09-09.md">P09-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P09/Q10-09.md">Q10-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P09/P10-09.md">P10-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P09/Q11-09.md">Q11-09</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter11/P09/P11-09.md">P11-09</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>10</b></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P10/Q05-10.md">Q05-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P10/P05-10.md">P05-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P10/Q06-10.md">Q06-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P10/P06-10.md">P06-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P10/Q07-10.md">Q07-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P10/P07-10.md">P07-10</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P10/Q10-10.md">Q10-10</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P10/P10-10.md">P10-10</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>11</b></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P11/Q05-11.md">Q05-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P11/P05-11.md">P05-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P11/Q06-11.md">Q06-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P11/P06-11.md">P06-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P11/Q07-11.md">Q07-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter07/P11/P07-11.md">P07-11</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P11/Q10-11.md">Q10-11</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter10/P11/P10-11.md">P10-11</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>12</b></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P12/Q05-12.md">Q05-12</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter05/P12/P05-12.md">P05-12</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P12/Q06-12.md">Q06-12</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P12/P06-12.md">P06-12</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td align="center"><b>13</b></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P13/Q06-13.md">Q06-13</a></td>
+    <td align="center"><a href="https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter06/P13/P06-13.md">P06-13</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 # :question: Questions-test
 <table>
   <tr>
