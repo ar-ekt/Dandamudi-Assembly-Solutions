@@ -171,7 +171,7 @@
 </table>
 
 
-# How-to
+# :information_source: How-to
 To be able to run the codes in this repository, you need to be under a Linux environment. there are three solutions:
 
  1. Linux as main OS or as a dual boot with another OS
@@ -182,7 +182,7 @@ To be able to run the codes in this repository, you need to be under a Linux env
  ### WSL
  Windows Subsystem for Linux is a compatibility layer for running Linux binary executables natively on Windows. Different distros can be installed as WSL, but the preferred distro is Ubuntu 18.04 LTS which you can get from Microsoft store.
  A detailed guide for installing WSL can be found [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). After installing and enabling WSL, we need to allow the support for 32-bit binaries in WSL. A brief explanation on how to do this can be found in a GitHub issue comment [here](https://github.com/microsoft/wsl/issues/2468#issuecomment-374904520).
- ### Tools
+ ### :wrench: Tools
  The next step is to download and install a couple of tools that we are going to need. The first tool is a debugger. The debugger of choice for WSL users is the x64dbg which can be installed on windows from [here](https://sourceforge.net/projects/x64dbg/files/snapshots/), And for others, the edb-debugger is a good option. The edb-debugger can be installed on Ubuntu by typing the following line in the terminal:
  ```bash
  sudo apt install edb-debugger 
@@ -191,7 +191,7 @@ To be able to run the codes in this repository, you need to be under a Linux env
  ```bash
  sudo apt install nasm
  ```
- ### Code
+ ### :keyboard: Code
  Now that we have prepared the environment for writing assembly code, it's good to also have a quick look at how x86 assembly language looks.
  Generally, a typical x86 source code that ends with the ".asm" extension, is made up of different sections, mainly ```.data```, ```.bss```, and ```.code``` (or ```.text```). Each section contains a number of lines that are each made of either an instruction with its arguments, a label, or both. the ```.code``` section has to start with a global label called ```_start``` and for exiting the program, we use the following code fragment for WSL:
  ```assembly
@@ -205,7 +205,7 @@ To be able to run the codes in this repository, you need to be under a Linux env
  int 0x80
 ```
 You will later on understand these code fragments perfectly fine; so for now, just remember that **this exit method is the main difference between the code written under WSL and the code written under other Linux environments.**
-### Write Programs
+### :keyboard: Write Programs
 In order to write programs in x86 NASM assembly, we need to use the tools provided in [Dandamudi-Assembly-Solutions/Tools/](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools) so the easier approach is to write our programs inside either the [Linux](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools/Linux) or the [WSL](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools/WSL) folder.
 
 #### WSL
@@ -241,7 +241,7 @@ The process of writing, assembling and running a program written in x86 assembly
 Then, this object file is linked with other object files that we use (lib.o) and together they create a 32 bit ELF binary executable file.
 A Bash script has been provided for you that handles all the steps of assembling and linking an assembly source file, and executes the resulting binary file in the end; this file is called "asm" for Linux. We use asm by providing it our source file as an argument; so inside our bash window open, we need to write ```./asm [filename]``` in order for it to work, where filename is an assembly source file that ends with ".asm".
 
-**NOTE:**
+**:warning: NOTE:**
 **before using asm for the first time, we need to make it executable by typing in the following line in bash:**
 ```bash
 chmod +x asm
