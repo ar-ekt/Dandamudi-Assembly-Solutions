@@ -1,4 +1,4 @@
-# :open_book: Dandamudi-Assembly-Solutions
+# :open_book: About
 Solutions for programming exercises of [Introduction to Assembly Language Programming (Second Edition)](https://www.amazon.com/Introduction-Assembly-Language-Programming-Processors-ebook-dp-B000VI6S70/dp/B000VI6S70/ref=mt_other?_encoding=UTF8&me=&qid=) by Sivarama P. Dandamudi
 
 <p align="center"><img src="https://user-images.githubusercontent.com/57006850/109093669-fc983800-772d-11eb-9081-de57712d3d38.jpg"/></img></p>
