@@ -169,3 +169,83 @@
 </td>
   </tr>
 </table>
+
+
+# How-to
+To be able to run the codes in this repository, you need to be under a Linux environment. there are three solutions:
+
+ 1. Linux as main OS or as a dual boot with another OS
+ 2. Linux in a virtual machine
+ 3. WSL (Windows Subsystem for Linux)
+ 
+ The first two are quite simple and don't need any explanation, but what is WSL?
+ ### WSL
+ Windows Subsystem for Linux is a compatibility layer for running Linux binary executables natively on Windows. Different distros can be installed as WSL, but the preferred distro is Ubuntu 18.04 LTS which you can get from Microsoft store.
+ A detailed guide for installing WSL can be found [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). After installing and enabling WSL, we need to allow the support for 32-bit binaries in WSL. A brief explanation on how to do this can be found in a GitHub issue comment [here](https://github.com/microsoft/wsl/issues/2468#issuecomment-374904520).
+ ### Tools
+ The next step is to download and install a couple of tools that we are going to need. The first tool is a debugger. The debugger of choice for WSL users is the x64dbg which can be installed on windows from [here](https://sourceforge.net/projects/x64dbg/files/snapshots/), And for others, the edb-debugger is a good option. The edb-debugger can be installed on Ubuntu by typing the following line in the terminal:
+ ```bash
+ sudo apt install edb-debugger 
+ ```
+ The other tool that we're going to need is NASM (Netwide Assembler). NASM can be installed on Ubuntu by typing the following line in the terminal:
+ ```bash
+ sudo apt install nasm
+ ```
+ ### Code
+ Now that we have prepared the environment for writing assembly code, it's good to also have a quick look at how x86 assembly language looks.
+ Generally, a typical x86 source code that ends with the ".asm" extension, is made up of different sections, mainly ```.data```, ```.bss```, and ```.code``` (or ```.text```). Each section contains a number of lines that are each made of either an instruction with its arguments, a label, or both. the ```.code``` section has to start with a global label called ```_start``` and for exiting the program, we use the following code fragment for WSL:
+ ```assembly
+ push 0
+ call ExitProcess
+ ```
+ and for Linux in other environments (VM, etc) we use the following fragment:
+ ```assembly
+ mov eax, 1
+ mov ebx, 0
+ int 0x80
+```
+You will later on understand these code fragments perfectly fine; so for now, just remember that **this exit method is the main difference between the code written under WSL and the code written under other Linux environments.**
+### Write Programs
+In order to write programs in x86 NASM assembly, we need to use the tools provided in [Dandamudi-Assembly-Solutions/Tools/](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools) so the easier approach is to write our programs inside either the [Linux](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools/Linux) or the [WSL](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/tree/main/Tools/WSL) folder.
+
+#### WSL
+There are 4 files in the WSL folder that help us write code in x86 assembly.
+
+ - lib.h
+ - libw.obj
+ - GoLink.exe
+ - asmw
+
+#### lib.h 
+Most of the code we write in this book includes the file named "lib.h" at the beginning. This is a header file that contains a set of macros for input/output that are supposed to make your job easier. just like in C, if we want to use the stuff defined in a header file, we need to include it in our source file. the syntax for including a file in x86 assembly is ```%include [filename]```
+#### libw.obj
+libw.obj is a set of functions written and assembled into an object file to be used and linked with your program, to give you some utility to work with. lib.h defines macros for the functions in libw.obj, so these files are used together in our programs.
+#### GoLink.exe
+The process of writing, assembling and running a program written in x86 assembly is pretty simple. First, our file is assembled with an assembler (NASM) into an object file. 
+Then, this object file is linked with other object files that we use (libw.obj) and together they create a 32 bit ELF binary executable file. the process of linking the object files in WSL is done using GoLink.exe.
+#### asmw
+A Bash script has been provided for you that handles all the steps of assembling and linking an assembly source file, and executes the resulting binary file in the end; this file is called asmw for WSL. We use asmw by providing it our source file as an argument; so inside our bash window open, we need to write ```./asmw [filename]``` in order for it to work, where filename is an assembly source file that ends with ".asm".
+#### Linux
+There are 3 files in the Linux folder that help us write code in x86 assembly.
+
+ - lib.h
+ - lib.o
+ - asmw
+
+#### lib.h 
+Most of the code we write in this book includes the file named "lib.h" at the beginning. This is a header file that contains a set of macros for input/output that are supposed to make your job easier. just like in C, if we want to use the stuff defined in a header file, we need to include it in our source file. the syntax for including a file in x86 assembly is ```%include [filename]```
+#### lib.o
+lib.o is a set of functions written and assembled into an object file to be used and linked with your program, to give you some utility to work with. lib.h defines macros for the functions in lib.o, so these files are used together in our programs.
+#### asm
+The process of writing, assembling and running a program written in x86 assembly is pretty simple. First, our file is assembled with an assembler (NASM) into an object file. 
+Then, this object file is linked with other object files that we use (lib.o) and together they create a 32 bit ELF binary executable file.
+A Bash script has been provided for you that handles all the steps of assembling and linking an assembly source file, and executes the resulting binary file in the end; this file is called "asm" for Linux. We use asm by providing it our source file as an argument; so inside our bash window open, we need to write ```./asm [filename]``` in order for it to work, where filename is an assembly source file that ends with ".asm".
+
+**NOTE:**
+**before using asm for the first time, we need to make it executable by typing in the following line in bash:**
+```bash
+chmod +x asm
+```
+### asm/asmw
+The bash scripts asm/asmw are just a sequence of bash commands that are supposed to make your job easier so you don't have to execute all the commands every time you want to assemble a program.
+If you read the scripts you can easily understand what's going on and then you can customize the scripts to fit your own purposes. (*e.g. change the pathnames in the script so you can assemble and run your programs from outside the folders.*)
