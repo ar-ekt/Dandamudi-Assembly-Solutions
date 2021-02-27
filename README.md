@@ -249,3 +249,6 @@ chmod +x asm
 ### asm/asmw
 The bash scripts asm/asmw are just a sequence of bash commands that are supposed to make your job easier so you don't have to execute all the commands every time you want to assemble a program.
 If you read the scripts you can easily understand what's going on and then you can customize the scripts to fit your own purposes. (*e.g. change the pathnames in the script so you can assemble and run your programs from outside the folders.*)
+
+# :copyright: License
+See [LICENSE](LICENSE).
