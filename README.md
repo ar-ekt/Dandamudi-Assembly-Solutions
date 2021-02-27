@@ -251,7 +251,7 @@ The bash scripts asm/asmw are just a sequence of bash commands that are supposed
 If you read the scripts you can easily understand what's going on and then you can customize the scripts to fit your own purposes. (*e.g. change the pathnames in the script so you can assemble and run your programs from outside the folders.*)
 
 # :handshake: Contributing
-To contribute to this project, please follow the below steps:
+To contribute to this project, please follow the steps below:
 
 1. fork the repository
 2. make all the changes that you want to see in the original repository (if you want to add or change some solutions, don't forget to follow assembly coding standards in your codes)
