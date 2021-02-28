@@ -15,7 +15,6 @@ Solutions for programming exercises of [Introduction to Assembly Language Progra
     <th>:bookmark: Chapter 10</th>
     <th>:bookmark: Chapter 11</th>
     <th>:bookmark: Chapter 14</th>
-    <th>:bookmark: Chapter 15</th>
   </tr>
   <tr>
     <td valign="top">
@@ -156,17 +155,6 @@ Solutions for programming exercises of [Introduction to Assembly Language Progra
 |           3|   [Q14-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P03/Q14-03.md)   |   [P14-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P03/P14-03.asm)   |
 |           4|   [Q14-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P04/Q14-04.md)   |   [P14-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P04/P14-04.asm)   |
 |           5|   [Q14-05](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P05/Q14-05.md)   |   [P14-05](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter14/P05/P14-05.asm)   |
-
-</td>
-<td valign="top">
-
-|   No.      |   Question                                                                                                   |   Code                                                                                                        |
-|   :---:    |   :---:                                                                                                      |   :---:                                                                                                       |
-|           1*|   [Q15-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P01/Q15-01.md)   |   [P15-01](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P01/P15-01.asm)   |
-|           2*|   [Q15-02](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P02/Q15-02.md)   |   [P15-02](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P02/P15-02.asm)   |
-|           3*|   [Q15-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P03/Q15-03.md)   |   [P15-03](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P03/P15-03.asm)   |
-|           4*|   [Q15-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P04/Q15-04.md)   |   [P15-04](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P04/P15-04.asm)   |
-|           5*|   [Q15-05](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P05/Q15-05.md)   |   [P15-05](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter15/P05/P15-05.asm)   |
 
 </td>
   </tr>
