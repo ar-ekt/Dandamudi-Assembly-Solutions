@@ -30,7 +30,7 @@ Solutions for programming exercises of [Introduction to Assembly Language Progra
 |   6        |   [Q04-06](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P06/Q04-06.md)   |   [P04-06](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P06/P04-06.asm)   |
 |   7        |   [Q04-07](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P07/Q04-07.md)   |   [P04-07](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P07/P04-07.asm)   |
 |   8        |   [Q04-08](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P08/Q04-08.md)   |   [P04-08](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P08/P04-08.asm)   |
-|   9*        |   [Q04-09](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/Q04-09.md)   |   [P04-09](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/P04-09.asm)   |
+|   9        |   [Q04-09](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/Q04-09.md)   |   [P04-09](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/blob/main/Codes/Chapter04/P09/P04-09.asm)   |
 
 </td>
 <td valign="top">
