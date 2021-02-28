@@ -25,7 +25,7 @@ conversion_loop:
     je divide_by_4
     sub BL, 48
     mov EDX, EAX
-    shl EDX, 1                  ;python: (n << 3) + (n << 1) = 8n + 2n = 10n    **credit: @ar-ekt
+    shl EDX, 1                  ;python: (n << 3) + (n << 1) = 8n + 2n = 10n
     shl EAX, 3
     add EAX, EDX
     add EAX, EBX                ;XY = 10X + Y
@@ -58,3 +58,4 @@ is_no:
 done:
     push 0
     call ExitProcess
+    

@@ -21,15 +21,15 @@ _start:
     puts inputBuffer
     puts cont1
     mov ebx, 0
-    mov ebx, inputBuffer+4
-init_pointer:
+    mov ebx, inputBuffer+4          ;set ebx to point to the end of the input buffer
+init_pointer:                       ;finding the size of the input
     dec ebx
     mov al, [ebx]
     cmp al, 0
     je init_pointer
-    mov eax, 0
-    mov cl, 0
-    mov edx, 0
+    xor eax, eax
+    xor cl, cl                      ;number of bits to shift for multiplication
+    xor edx, edx                    ;sum or result
 calc:
     mov al, [ebx]
     cmp al, 0
@@ -42,24 +42,24 @@ calc:
 a_to_f:
     mov al, [ebx]
     sub al, 'A'
-    add al, 10
+    add al, 10                      ;convert hex digit to decimal number
 skip1:
     cmp cl, 0
-    je LS
-    shl ax, cl
+    je least_significant_digit
+    shl ax, cl                      ;left shift by N is equivalent to multiplication by 2^N
     add edx, eax
     jmp iterate
-LS:
+least_significant_digit:            ;the least significant digit will be multiplied by 1, so no need to shift it at all
     add edx, eax
 iterate:
-    add cl, 4
+    add cl, 4                       ;multiplier *= 16
     dec ebx
     jmp calc
 finish:
-    i2a edx, resultBuffer
+    i2a edx, resultBuffer           ;convert to ascii for printing
     puts resultBuffer
     puts newline
-tprompt:
+tprompt:                            ;prompt the user for termination
     puts prompt
     fgets inputBuffer, 6
     mov ebx, 0
@@ -73,3 +73,4 @@ tprompt:
 end:
     push 0
     call ExitProcess
+    
