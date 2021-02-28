@@ -28,9 +28,9 @@ _start:
 calc:
     cmp ax, 0
     je finish
-    xor ch, ch
-    mov cl, 16
-    div cx
+    mov dl, al
+    and dl, 0FH                     ;remainder is the lower 4 bits
+    shr ax, 4                       ;divide by 16
     cmp dl, 9
     jg a_to_f
     add dl, '0'
@@ -39,33 +39,33 @@ a_to_f:
     sub dl, 10
     add dl, 'A'
 skip1:
-    xor dh, dh
-    push dx
-    add bl, 1
+    xor dh, dh                      ;characters are supposed to be placed in the array backwards
+    push dx                         ;so we push them here and pop them later
+    add bl, 1                       ;number of characters in our result
     xor dx, dx
     jmp calc
 finish:
-    cmp bl, 0
-    je spcl
-    mov ecx, ebx
-    mov ebx, resultBuffer
-lp:
-    pop dx
+    cmp bl, 0                       ;if BL == 0 then we have a special condition and the length of result is 0
+    je length_zero
+    mov ecx, ebx                    ;set counter in ecx
+    mov ebx, resultBuffer           ;place the address of our array in ebx
+place_in_array:
+    pop dx                          ;pop characters so we can place them in the array in reverse order
     mov [ebx], dx
     inc ebx
-    loop lp
+    loop place_in_array
     mov [ebx], DWORD 0
     puts resultBuffer
     jmp tprompt
-spcl:
+length_zero:
     mov ebx, resultBuffer
-    mov ah, '0'
+    mov ah, '0'                     ;set result to 0
     mov [ebx], ah
     inc ebx
-    mov ah, 0
+    mov ah, 0                       ;terminate the result string
     mov [ebx], ah
     puts resultBuffer
-tprompt:
+tprompt:                            ;prompt the user for termination
     puts newline
     puts prompt
     fgets inputBuffer, 6
@@ -80,3 +80,4 @@ tprompt:
 end:
     push 0
     call ExitProcess
+    
