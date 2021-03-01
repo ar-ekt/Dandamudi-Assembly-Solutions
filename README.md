@@ -243,9 +243,9 @@ If you read the scripts you can easily understand what's going on and then you c
 # :handshake: Contributing
 To contribute to this project, please follow the steps below:
 
-1. [fork](github.com/ar-ekt/Dandamudi-Assembly-Solutions/fork) the repository
+1. [fork](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/fork) the repository
 2. make all the changes that you want to see in the original repository (if you want to add or change some solutions, don't forget to follow assembly coding standards in your codes)
-3. push your changes to a new branch in your fork and [create a pull request](github.com/ar-ekt/Dandamudi-Assembly-Solutions/compare) along with changes explanation
+3. push your changes to a new branch in your fork and [create a pull request](https://github.com/ar-ekt/Dandamudi-Assembly-Solutions/compare) along with changes explanation
 
 # :copyright: License
 See [LICENSE](LICENSE).
