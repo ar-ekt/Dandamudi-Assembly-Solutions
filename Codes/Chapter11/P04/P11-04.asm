@@ -59,9 +59,9 @@ _end:
     push 0
     call ExitProcess
 
-; proc strlen -> increase the length of the smaller number to the length
-;                of the larger number by adding zero to its left and
-;                return length of the bigger number in EAX
+; proc fix_length -> increase the length of the smaller number to the length
+;                    of the larger number by adding zero to its left and
+;                    return length of the bigger number in EAX
 fix_length:
     %define number1 DWORD [EBP+8]
     %define number2 DWORD [EBP+12]
@@ -97,7 +97,7 @@ fix_length_done:
     leave
     ret 8
 
-; proc strlen -> add zero to the left of number until its length reaches len2
+; proc addZero -> add zero to the left of number until its length reaches len2
 addZero:
     %define number DWORD [EBP+8]
     %define len1 DWORD [EBP+12]
