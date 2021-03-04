@@ -7,8 +7,9 @@ section .data
     NULL EQU 0
     
     NEWLINE db 10, NULL
-    prompt_msg db "Please input multiplicand: ", NULL
-    prompt_msg1 db "Please input multiplier: ", NULL
+    MSG_INPUT1 db "Please input multiplicand: ", NULL
+    MSG_INPUT2 db "Please input multiplier: ", NULL
+    MSG_OUTPUT db "Result: ", NULL
 
 section .bss
     multiplier resb MAX_NUMBER_LENGTH
@@ -19,9 +20,9 @@ section .bss
 
 section .code
 _start:
-    puts prompt_msg
+    puts MSG_INPUT1
     fgets multiplicand, MAX_NUMBER_LENGTH
-    puts prompt_msg1
+    puts MSG_INPUT2
     fgets multiplier, MAX_NUMBER_LENGTH
     mov [result], BYTE NULL
     mov ESI, multiplier                   ; ESI holds pointer to multiplier
@@ -29,7 +30,7 @@ _start:
 multiplication_loop:
     inc ESI                               ; update ESI
     cmp [ESI], BYTE NULL                  ; end of multiplier
-    je _end
+    je display_result
     push ESI
     push multiplicand
     push temp_result
@@ -42,9 +43,11 @@ multiplication_loop:
     push result
     cALl num_add                          ; result += temp_result
     jmp multiplication_loop
-_end:
+display_result:
+    puts MSG_OUTPUT
     puts result
     puts NEWLINE
+_end:
     push 0
     cALl ExitProcess
 
